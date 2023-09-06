@@ -1,0 +1,290 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+div {
+  scroll-margin-top: 100%; 
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #59ACFFFF;
+  font-family: 'Archivo Black', sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #8A7DDCFF;
+  transition: 0.2s ease;
+}
+
+.hamburger {
+  display: none;
+  cursor: grab;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+#intro {
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  top: 50vh;
+  width: 100%;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
+}
+ 
+.main img {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-information {
+  display: block;
+  text-align: center;
+  overflow-x: hidden;
+  font-family: 'Archivo Black', sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.main-information p {
+  font-family: 'Merriweather', serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  padding: 20px;
+  color: #59ACFFFF;
+  font-size: 3rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 20px;
+  padding: 20px;
+  color: #A9449F;
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+.aboutpics {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.aboutpics img {
+  max-width: 50%;
+  height: auto;
+  padding: 10px;
+}
+
+.mission-info {
+  display: flex; 
+  padding: 10px;
+  justify-content: space-between;
+}
+
+#support, #community, #diversity {
+  color: #8A7DDCFF;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 33.33%;
+}
+
+.mission-info p {
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px;
+  color: black;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.what-we-do, .education {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.education {
+  flex-direction: row-reverse;
+}
+
+.what-we-do img {
+  flex-shrink: 0;
+  width: 100%; 
+  padding: 50px;
+  flex: 1;
+}
+
+.education img {
+  flex-shrink: 0;
+  width: 100%; 
+  padding: 50px;
+  flex: 1;
+}
+
+#do-text {
+  text-align: left;
+} 
+
+#education-text {
+  text-align: right;
+}
+
+@media screen and (max-width: 1030px) {
+  .nav-links {
+    width: 60%;
+  }
+  .what-we-do, .education {
+    display: block;
+  }
+  
+  #do-text, #education-text {
+    display: block;
+    /* font-size: 16px; */
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*
+  body {
+    overflow-x: hidden;
+  }
+  */
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #59ACFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity:0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .main img {
+    width: 100%;
+    height: 100%;
+  }
+  #intro {
+    position: absolute;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    top: 20%;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .mission-info {
+    display: block;
+  }
+  .mission-info div {
+    justify-content: center;
+    text-align: center;
+    /*width: 50%;*/
+    margin: auto;
+  }
+  .mission-info p {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    font-size: 16px;
+    padding-bottom: 50px;
+  }
+  
+  #support, #community, #diversity {
+    width: 100%;
+  }
+  .what-we-do {
+    display: block;
+  }
+  
+  #do-text {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+  }
+
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
